@@ -1,0 +1,60 @@
+{
+  "name": "@blast-engine/responsive-component",
+  "version": "2.0.0",
+  "main": "dist/bundle.js",
+  "homepage": "https://github.com/blast-engine/responsive-component",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "node ./scripts/test.js --watch",
+    "test:debug": "node --inspect-brk ./scripts/test.js --watch",
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "npm-publish": "yarn version --patch; yarn publish --access public"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.2",
+    "babel-preset-react-app": "^3.1.1",
+    "babel-runtime": "6.26.0",
+    "jest": "20.0.4",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@blast-engine/utils": "^0.0.1",
+    "react": "^16.8.6"
+  }
+}
