@@ -88,5 +88,7 @@ export const createScreenWidthBroadcaster = () => {
 
   thresholds.forEach(t => t.query.addListener(update))
   update()
+
+  return broadcaster
   
 }
